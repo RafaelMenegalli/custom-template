@@ -1,12 +1,13 @@
 import { useState } from "react";
 import styles from "./styles.module.scss";
 import { Topbar } from "@/components/Topbar";
-import { Table, Button, IconButton, Pagination, Input, InputGroup } from 'rsuite';
+import { Table, IconButton, Pagination, Input, InputGroup } from 'rsuite';
 import PlusIcon from '@rsuite/icons/Plus';
 import SearchIcon from '@rsuite/icons/Search';
 import PageIcon from '@rsuite/icons/Page';
 import ReloadIcon from '@rsuite/icons/Reload';
 import EditIcon from '@rsuite/icons/Edit';
+import { paginationLocale } from "@/utils/paginationLocale";
 
 const { Column, HeaderCell, Cell } = Table;
 
@@ -85,13 +86,10 @@ export default function Users() {
                         <Table
                             height={450}
                             data={data}
-                            onRowClick={rowData => {
-                                console.log(rowData);
-                            }}
                             bordered
                             loading={loadingTable}
                         >
-                            <Column width={60} align="center" fixed resizable>
+                            <Column width={60} align="center" resizable>
                                 <HeaderCell>Código</HeaderCell>
                                 <Cell dataKey="id" />
                             </Column>
@@ -141,13 +139,15 @@ export default function Users() {
                                 <Cell dataKey="jobTitle" />
                             </Column>
 
-                            <Column width={80} fixed="right" resizable>
+                            <Column width={80} resizable>
                                 <HeaderCell>Ações</HeaderCell>
 
                                 <Cell style={{ padding: '6px' }}>
                                     {rowData => (
                                         <IconButton
                                             icon={<EditIcon />}
+                                            appearance="subtle"
+                                            onClick={() => alert(rowData.id)}
                                         />
                                     )}
                                 </Cell>
@@ -171,6 +171,7 @@ export default function Users() {
                                 activePage={page}
                                 onChangePage={setPage}
                                 onChangeLimit={handleChangeLimit}
+                                locale={paginationLocale}
                             />
                         </div>
                     </div>
