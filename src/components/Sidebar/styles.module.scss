@@ -1,0 +1,16 @@
+.logoContainer {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F7F7FA;
+
+    span {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+}
+
+.sidenav {
+    height: calc(100vh - 50px);
+}
