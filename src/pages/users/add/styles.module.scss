@@ -1,0 +1,37 @@
+.container {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.headerActions {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1rem;
+}
+
+.formItem {
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+}
+
+.helpText {
+    font-size: .7rem;
+    color: #717273;
+    margin-left: .3rem;
+}
+
+.footerActions {
+    display: flex;
+    gap: 1rem;
+}

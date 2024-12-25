@@ -8,6 +8,7 @@ import PageIcon from '@rsuite/icons/Page';
 import ReloadIcon from '@rsuite/icons/Reload';
 import EditIcon from '@rsuite/icons/Edit';
 import { paginationLocale } from "@/utils/paginationLocale";
+import Link from "next/link";
 
 const { Column, HeaderCell, Cell } = Table;
 
@@ -64,9 +65,9 @@ export default function Users() {
     return (
         <>
             <div style={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
-                <Topbar title="Usuários" backgroundColor="#db8000" />
-                <div className={styles.container}>
+                <Topbar title="Listagem de Usuários" backgroundColor="#db8000" />
 
+                <div className={styles.container}>
                     <div className={styles.headerActions}>
                         <div style={{ width: '100%' }}>
                             <CustomInputGroupWidthButton
@@ -77,7 +78,7 @@ export default function Users() {
                         <div className={styles.buttonActions}>
                             <IconButton icon={<PageIcon />} appearance="primary" color="violet" />
                             <IconButton icon={<ReloadIcon />} appearance="primary" color="yellow" />
-                            <IconButton icon={<PlusIcon />} appearance="primary" color="green" />
+                            <IconButton icon={<PlusIcon />} appearance="primary" color="green" as={Link} href="/users/add" />
                         </div>
                     </div>
 
