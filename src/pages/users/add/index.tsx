@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useState } from "react";
 import styles from "./styles.module.scss";
 import { Topbar } from "@/components/Topbar";
-import { IconButton, Button, Input, Nav } from "rsuite";
+import { IconButton, Button, Input, Nav, DatePicker } from "rsuite";
 import ArrowLeftLineIcon from '@rsuite/icons/ArrowLeftLine';
 import PageIcon from '@rsuite/icons/Page';
 
@@ -107,6 +107,13 @@ export default function Add() {
                                         <Input
                                             type="text"
                                             placeholder="Observações de contato..."
+                                        />
+                                    </div>
+
+                                    <div className={styles.formItem} style={{ gridColumn: 'span 3' }}>
+                                        <span>Data para entrar em contato</span>
+                                        <DatePicker
+                                            oneTap
                                         />
                                     </div>
                                 </>

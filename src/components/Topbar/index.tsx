@@ -1,5 +1,4 @@
 import styles from "./styles.module.scss";
-import UserBadgeIcon from '@rsuite/icons/UserBadge';
 import MessageIcon from '@rsuite/icons/Message';
 import NoticeIcon from '@rsuite/icons/Notice';
 import AdminIcon from '@rsuite/icons/Admin';

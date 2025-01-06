@@ -9,14 +9,14 @@
 .headerActions {
     width: 100%;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
 }
 
 .form {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    gap: 1rem;
+    gap: .5rem;
 }
 
 .formItem {
